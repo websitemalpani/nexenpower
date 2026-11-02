@@ -6,14 +6,7 @@ const nextConfig: NextConfig = {
   images: { formats: ["image/avif", "image/webp"] },
   cacheComponents: true,
   partialPrefetching: true,
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
-  },
+  // Tailwind runs through PostCSS (postcss.config.mjs) — no custom Turbopack CSS loader.
 };
 
 export default nextConfig;
